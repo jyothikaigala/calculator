@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<title>Fahrenheit to Celcius Temperature Converter</title>
+<style>
+    body,html{
+    background-color:rgba(11, 160, 228, 0.804)
+    }
+    </style>
+    <body>
+        <center><h2 style="color: rgb(14, 14, 14);padding-left: 5%;">Temperature Converter</h2></center>
+        <center>
+            <div style="background-color: white;width: 30%;height: 50%;margin-left: 5%;padding-top:5%;padding-bottom: 5%;border-radius: 5%;">
+                <p style="font-size: 30px">Fahrenheit to Celsius</p><br>
+                <p>
+                    <label><b style="color: rgb(183, 7, 22);">Fahrenheit :</b></label>
+                    
+                    <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConvertor(this.value)" onchange="temperatureConvertor(this.value)">
+                </p>
+                <p style="padding-right: 43%;color: rgb(213, 0, 0);"><b>Celsius : </b><span id="outputCelcius1"></span></p>
+                <p style="font-size: 30px;">Celsius to Fahrenheit </p><br>
+                <p><label style="padding-right: 3%;color: rgb(218, 0, 0);"><b>Celsius</b></label>
+                    
+                    <input id="inputCelsius" type="number" placeholder="Celsius"  oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+                </p>
+                <p style="padding-right: 32%;color: rgb(230, 3, 3);"><b>Fahrenheit : </b> <span id="outputFahrenheit1"></span></p>
+                <script>
+                function temperatureConvertor(valNum) {
+                    valNum = parseFloat(valNum);
+                    document.getElementById("outputCelcius1").innerHTML=(valNum-32)/1.8;
+
+                }
+                function temperatureConverter(Num) {
+                    Num = parseFloat(Num);
+                    document.getElementById("outputFahrenheit1").innerHTML=(Num*1.8)+32;
+                    }
+                    </script>
+                    </div>
+                </center>
+            </body>
+            </html>
